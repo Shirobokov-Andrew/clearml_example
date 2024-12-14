@@ -5,7 +5,7 @@
 pip install clearml
 ```
 Затем заходим на официальный сайт ClearML https://app.clear.ml/settings/workspace-configuration и регистрируемся там.\
-Затем идём в Profile -> Setting -> Workspace и жмём кнопку Create New Credentials.\
+Затем идём в Profile -> Settings -> Workspace и жмём кнопку Create New Credentials.\
 Там открывается окно, в котором даны нужные конфиги для ClearML. Копируем их.\
 Затем идём в командную строку в вашем проекте, где вы устанавливали ClearML и прописываем:
 ```
@@ -21,7 +21,7 @@ C:\Users\<user>\clearml.conf
 ```
 ~/clearml.conf
 ```
-Этот конфиг затем можно изменять под свои нужды (например, изменить там *api_server*, *web_server*, *files_server* для развёртывания на своём сервере или же, например, добавить credentials для AWS S3) или копировать.\
+Этот конфиг затем можно изменять под свои нужды (например, изменить там *api_server*, *web_server*, *files_server* для развёртывания на своём сервере или же, например, добавить credentials для AWS S3) или копировать.
 
 Дальше читаем документацию и смотрим код в src
 

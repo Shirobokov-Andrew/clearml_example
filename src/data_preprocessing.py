@@ -20,11 +20,6 @@ def preprocess_data(
         task_type=TaskTypes.data_processing,
         tags=["ver1"],
     )
-    task_params = {
-        "input_path": input_path,
-        "project_name": project_name,
-    }
-    task_params = task.connect(task_params)
     # Preparing two train parts for two models and one test part
     df = pd.read_csv(input_path)
     train_df, test_df = train_test_split(df, test_size=0.5, random_state=42, shuffle=True)

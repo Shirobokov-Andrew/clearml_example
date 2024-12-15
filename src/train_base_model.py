@@ -27,14 +27,6 @@ def train_catboost(
         tags=[f"model_{model_num}"],
         task_type=TaskTypes.training,
     )
-    task_params = {
-        "train_dataset_prefix": train_dataset_prefix,
-        "test_dataset_name": test_dataset_name,
-        "project_name": project_name,
-        "output_model_path_dir": output_model_path_dir,
-        "model_num": model_num,
-    }
-    task_params = task.connect(task_params)
 
     # Load datasets
     train_dataset = Dataset.get(dataset_project=project_name, dataset_name=f"{train_dataset_prefix}{model_num}")

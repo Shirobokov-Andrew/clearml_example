@@ -24,6 +24,13 @@ def train_blender(
         :param output_model_path: Path to save the blending model.
     """
     task = Task.init(project_name="Titanic Pipeline", task_name="Train Blender", task_type=TaskTypes.training)
+    task_params = {
+        "project_name": project_name,
+        "test_dataset_name": test_dataset_name,
+        "base_model_artifact_name": base_model_artifact_name,
+        "output_model_path": output_model_path
+    }
+    task_params = task.connect(task_params)
 
     # Load datasets and models
     test_dataset = Dataset.get(dataset_project=project_name, dataset_name=f"{test_dataset_name}")
